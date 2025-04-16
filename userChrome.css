@@ -1,0 +1,59 @@
+/* Frank edited file - you are good to go...*/
+
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+/*@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/* Adding empty space for buttons */
+
+/* /* Hide tabs at the top of the window */
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+  
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+/* Keep titlebar buttons visible and adequately sized */
+#toolbar-menubar {
+  overflow: visible !important;
+}
+#sidebar-main {
+  display: none !important;
+}
+
+.titlebar-close, .titlebar-restore, .titlebar-min, .titlebar-max {
+  height: 40px;
+}
+
+/* Fix for main menu calling by Alt button */
+#titlebar > #toolbar-menubar {
+  margin-top: 0;
+}
+
+/* Move minimize/restore/close buttons to empty space */
+#TabsToolbar > .titlebar-buttonbox-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+#sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
+    visibility: collapse;
+    display: none;
+}
+
+#sidebar {
+  box-shadow: none !important;
+  border: none !important;
+} 
+/* get rid of sidebar button*/
+image.toolbarbutton-icon[label="Sidebars"] {
+  display: none !important;
+}
