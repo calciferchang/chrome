@@ -57,3 +57,7 @@
 image.toolbarbutton-icon[label="Sidebars"] {
   display: none !important;
 }
+
+--border-color-card {
+  display: none !important;
+}
